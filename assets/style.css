@@ -1,0 +1,216 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Quicksand', serif;
+	font-optical-sizing: auto;
+}
+
+main {
+	padding: 20px;
+	display: flex;
+
+	gap: 2.5rem;
+}
+
+#content {
+	flex: 5;
+
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 2rem 2rem;
+}
+
+h2,
+h3 {
+	color: #cba46d;
+	border-bottom: 3px solid #cba46d;
+	display: inline-block;
+	padding: 5px;
+	font-optical-sizing: auto;
+}
+
+header {
+	display: inline;
+}
+
+.jumbotron div h1 {
+	font-size: 3rem;
+}
+
+.jumbotron {
+	font-size: 20px;
+	text-align: lefr;
+	color: white;
+	position: relative;
+}
+
+.jumbotron div {
+	position: absolute;
+	max-width: 600px;
+	margin-left: 10px;
+}
+
+.jumbotron div p {
+	font-weight: 380;
+}
+
+.header-bg {
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.navbar {
+	background-color: #cba46d;
+	width: 100%;
+	box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	margin-inline: auto;
+	position: sticky;
+	top: 0;
+	height: 100%;
+	margin-top: -15px;
+	overflow-x: hidden;
+}
+
+.navbar ul {
+	padding-block: 0;
+
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	gap: 2rem;
+}
+
+li a {
+	color: white;
+
+	text-decoration: none;
+	font-weight: 600;
+	padding: 5px 0;
+	transition: all 200ms;
+	border-bottom: #000000;
+}
+
+li a:hover {
+	border-bottom: 2px solid white;
+}
+
+.logo-1 {
+	color: white;
+}
+
+.logo-2 {
+	color: red;
+}
+
+.ikn {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 1rem;
+
+	display: flex;
+	font-optical-sizing: auto;
+}
+
+.image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	object-position: bottom;
+	border-radius: 5px 5px 0 0;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+
+.card-body {
+	padding: 20px;
+}
+
+aside {
+	flex: 2;
+}
+
+.aside-title {
+	margin-left: 20px;
+}
+
+.aside-gallery {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	gap: 16px;
+}
+
+.aside-image {
+	width: 100%;
+	max-height: 190px;
+	border-radius: 8px;
+	object-fit: cover;
+	object-position: center;
+}
+
+footer {
+	padding: 15px;
+	color: white;
+	background-color: #cba46d;
+
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+	main {
+		flex-flow: column nowrap;
+	}
+
+	main aside {
+		align-self: center;
+	}
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+	main aside {
+		align-self: stretch;
+	}
+}
+
+/* Perangkat dengan lebar layar 507px dan dibawahnya */
+@media screen and (max-width: 507px) {
+	.ikn {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.logo-1 {
+		color: red;
+	}
+
+	.logo-2 {
+		color: white;
+	}
+
+	.navbar ul {
+		gap: 1rem;
+		justify-content: center;
+		padding: 5px;
+	}
+}
